@@ -213,26 +213,26 @@ document.getElementById("counter").innerHTML = 1 + "/" + path.length; */
 
 // Disappearing Cursor
 
-(function() {
-    var mouseTimer = null, cursorVisible = true;
+// (function() {
+//     var mouseTimer = null, cursorVisible = true;
 
-    function disappearCursor() {
-        mouseTimer = null;
-        document.body.style.cursor = "none";
-        cursorVisible = false;
-    }
+//     function disappearCursor() {
+//         mouseTimer = null;
+//         document.body.style.cursor = "none";
+//         cursorVisible = false;
+//     }
 
-    document.onmousemove = function() {
-        if (mouseTimer) {
-            window.clearTimeout(mouseTimer);
-        }
-        if (!cursorVisible) {
-            document.body.style.cursor = "default";
-            cursorVisible = true;
-        }
-        mouseTimer = window.setTimeout(disappearCursor, 1000);
-    };
-})();
+//     document.onmousemove = function() {
+//         if (mouseTimer) {
+//             window.clearTimeout(mouseTimer);
+//         }
+//         if (!cursorVisible) {
+//             document.body.style.cursor = "default";
+//             cursorVisible = true;
+//         }
+//         mouseTimer = window.setTimeout(disappearCursor, 1000);
+//     };
+// })();
 
 // Disappearing Buttons
 
