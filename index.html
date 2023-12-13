@@ -102,6 +102,7 @@
     <footer>    
     </footer>
 
+    <script src="script.js"></script>
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
         const firebaseConfig = {
@@ -113,7 +114,28 @@
           appId: "1:244130771211:web:f9969f45f5a4f039aff20e"
         };
         const app = initializeApp(firebaseConfig);
+        // File upload logic
+        const storageService = firebase.storage();
+        const storageRef = storageService.ref();
+        let selectedFile;
+        handleFileUploadChange(e) {
+            selectedFile = e.target.files[0];
+        }
+        handleFileUploadSubmit(e) {  
+            const uploadTask = storageRef.child(`tributes/${selectedFile.name}`).put(selectedFile);
+            uploadTask.on('state_changed', (snapshot) => {
+            // Observe state change events such as progress, pause, and resume
+            }, (error) => {
+                // Handle unsuccessful uploads
+                console.log(error);
+            }, () => {
+                // Do something once upload is complete
+                alert('Upload finished, thank you for uploading a tribute video or image for Earl!');
+            });
+        }
+
+        document.querySelector('.file-select').addEventListener('change', handleFileUploadChange);
+        document.querySelector('.file-submit').addEventListener('click', handleFileUploadSubmit);
     </script>
-    <script src="script.js"></script>
 </body>
 </html>

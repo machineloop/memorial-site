@@ -254,29 +254,3 @@ _delay = setInterval(delayCheck, 1000);
 });
 // page loads starts delay timer
 _delay = setInterval(delayCheck, 1000);
-
-
-
-
-// File upload logic
-const storageService = firebase.storage();
-const storageRef = storageService.ref();
-let selectedFile;
-handleFileUploadChange(e) {
-    selectedFile = e.target.files[0];
-}
-handleFileUploadSubmit(e) {  
-    const uploadTask = storageRef.child(`tributes/${selectedFile.name}`).put(selectedFile);
-    uploadTask.on('state_changed', (snapshot) => {
-    // Observe state change events such as progress, pause, and resume
-    }, (error) => {
-        // Handle unsuccessful uploads
-        console.log(error);
-    }, () => {
-        // Do something once upload is complete
-        alert('Upload finished, thank you for uploading a tribute video or image for Earl!');
-    });
-}
-
-document.querySelector('.file-select').addEventListener('change', handleFileUploadChange);
-document.querySelector('.file-submit').addEventListener('click', handleFileUploadSubmit);
