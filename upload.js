@@ -23,8 +23,12 @@ let submitterName;
 let metadata;
 
 function handleFileUploadChange(e) {
-    submitterName = document.querySelector('#name_submitter').nodeValue;
     selectedFile = e.target.files[0] || '';
+}
+
+function handleFileUploadSubmit(e) {
+    // Upload file and metadata to the object 'images/mountains.jpg'
+    submitterName = document.querySelector('#name_submitter').nodeValue;
     fileType = selectedFile.type || '';
     metadata = {
         contentType: `${fileType}`,
@@ -32,15 +36,11 @@ function handleFileUploadChange(e) {
             'submitter': `${submitterName}`,
         }
     };
-}
-
-function handleFileUploadSubmit(e) {
-    // Upload file and metadata to the object 'images/mountains.jpg'
     const storageRef = ref(storage, 'tributes/' + selectedFile.name);
     const uploadTask = uploadBytesResumable(storageRef, selectedFile, metadata);
     uploadTask.on('state_changed', (snapshot) => {
         const progressInput = document.getElementById('file_progress');
-        progressInput.style.display = 'block';
+        progressInput.style.display = 'inline';
         // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
         const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
         console.log('Upload is ' + progress + '% done');
