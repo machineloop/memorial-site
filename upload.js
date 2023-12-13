@@ -59,10 +59,12 @@ function handleFileUploadSubmit(e) {
         console.log(error);
         alert(`Please try again. Upload failed with following error: ${error}`);
     }, () => {
-        document.querySelector("input[type=file]").value = null;
         // Do something once upload is complete
+        document.getElementById('file_progress').style.display = 'none';
         alert('Upload finished, thank you for uploading a tribute video or image for Earl!');
-        document.querySelector('#name_submitter').value || '';
+        document.querySelector('#name_submitter').value = '';
+        document.querySelector("input[type=file]").value = null;
+        document.querySelector("input[type=submit]").setAttribute('disabled', true);
     });
 }
 
