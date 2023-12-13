@@ -236,21 +236,21 @@ document.getElementById("counter").innerHTML = 1 + "/" + path.length; */
 
 // Disappearing Buttons
 
-var timedelay = 1;
-function delayCheck()
-{
-if(timedelay == 1)
-{
-$('#button').fadeOut();
-timedelay = 1;
-}
-timedelay = timedelay+1;
-}
-$(document).mousemove(function() {
-$('#button').fadeIn();
-timedelay = 1;
-clearInterval(_delay);
-_delay = setInterval(delayCheck, 1000);
-});
-// page loads starts delay timer
-_delay = setInterval(delayCheck, 1000);
+// var timedelay = 1;
+// function delayCheck()
+// {
+// if(timedelay == 1)
+// {
+// $('#button').fadeOut();
+// timedelay = 1;
+// }
+// timedelay = timedelay+1;
+// }
+// $(document).mousemove(function() {
+// $('#button').fadeIn();
+// timedelay = 1;
+// clearInterval(_delay);
+// _delay = setInterval(delayCheck, 1000);
+// });
+// // page loads starts delay timer
+// _delay = setInterval(delayCheck, 1000);
