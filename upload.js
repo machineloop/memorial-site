@@ -1,3 +1,4 @@
+import { getStorage, ref, uploadBytesResumable } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js'
 // File upload logic
 const storage = getStorage(window.app);
 let selectedFile;

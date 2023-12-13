@@ -104,7 +104,7 @@
 
     <script src="script.js"></script>
     <script type="module">
-        import { initializeApp, getStorage, ref, uploadBytesResumable, getDownloadURL } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js'
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js'
         const firebaseConfig = {
           apiKey: "AIzaSyD-nPtV9JMX5y32rT3hzGvrRcwircWG28U",
           authDomain: "earl-tribute.firebaseapp.com",
@@ -115,6 +115,6 @@
         };
         window.app = initializeApp(firebaseConfig);
     </script>
-    <script src="upload.js"></script>
+    <script type="module" src="upload.js"></script>
 </body>
 </html>
