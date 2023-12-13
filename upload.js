@@ -62,7 +62,6 @@ function handleFileUploadSubmit(e) {
         // Do something once upload is complete
         document.getElementById('file_progress').style.display = 'none';
         alert('Upload finished, thank you for uploading a tribute video or image for Earl!');
-        document.querySelector('#name_submitter').value = '';
         document.querySelector("input[type=file]").value = null;
         document.querySelector("input[type=submit]").setAttribute('disabled', true);
     });
