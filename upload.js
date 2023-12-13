@@ -28,7 +28,7 @@ function handleFileUploadChange(e) {
 
 function handleFileUploadSubmit(e) {
     // Upload file and metadata to the object 'images/mountains.jpg'
-    submitterName = document.querySelector('#name_submitter').nodeValue;
+    submitterName = document.querySelector('#name_submitter').value || '';
     fileType = selectedFile.type || '';
     metadata = {
         contentType: `${fileType}`,
