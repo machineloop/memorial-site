@@ -118,10 +118,10 @@
         const storageService = firebase.storage();
         const storageRef = storageService.ref();
         let selectedFile;
-        handleFileUploadChange(e) {
+        function handleFileUploadChange(e) {
             selectedFile = e.target.files[0];
         }
-        handleFileUploadSubmit(e) {  
+        function handleFileUploadSubmit(e) {  
             const uploadTask = storageRef.child(`tributes/${selectedFile.name}`).put(selectedFile);
             uploadTask.on('state_changed', (snapshot) => {
             // Observe state change events such as progress, pause, and resume
