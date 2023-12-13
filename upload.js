@@ -1,4 +1,14 @@
-import { getStorage, ref, uploadBytesResumable } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js'
+import { initializeApp, getStorage, ref, uploadBytesResumable } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
+
+const firebaseConfig = {
+  apiKey: "AIzaSyD-nPtV9JMX5y32rT3hzGvrRcwircWG28U",
+  authDomain: "earl-tribute.firebaseapp.com",
+  projectId: "earl-tribute",
+  storageBucket: "earl-tribute.appspot.com",
+  messagingSenderId: "244130771211",
+  appId: "1:244130771211:web:f9969f45f5a4f039aff20e"
+};
+window.app = initializeApp(firebaseConfig);
 // File upload logic
 const storage = getStorage(window.app);
 let selectedFile;
