@@ -121,7 +121,7 @@
             selectedFile = e.target.files[0];
         }
         handleFileUploadSubmit(e) {  
-            const uploadTask = storageRef.child(`${selectedFile.name}`).put(selectedFile);
+            const uploadTask = storageRef.child(`tributes/${selectedFile.name}`).put(selectedFile);
             uploadTask.on('state_changed', (snapshot) => {
             // Observe state change events such as progress, pause, and resume
             }, (error) => {
