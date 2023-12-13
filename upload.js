@@ -39,21 +39,26 @@ function handleFileUploadSubmit(e) {
     const storageRef = ref(storage, 'tributes/' + selectedFile.name);
     const uploadTask = uploadBytesResumable(storageRef, selectedFile, metadata);
     uploadTask.on('state_changed', (snapshot) => {
+        const progressInput = document.getElementById('file_progress');
+        progressInput.style.display = 'block';
         // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
         const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
         console.log('Upload is ' + progress + '% done');
         switch (snapshot.state) {
             case 'paused':
                 console.log('Upload is paused');
+                progressInput.value = progress;
                 break;
             case 'running':
                 console.log('Upload is running');
+                progressInput.value = progress;
                 break;
         }
     }, (error) => {
         // Handle unsuccessful uploads
         console.log(error);
     }, () => {
+        document.getElementById('file_progress').style.display = 'none';
         // Do something once upload is complete
         alert('Upload finished, thank you for uploading a tribute video or image for Earl!');
     });
