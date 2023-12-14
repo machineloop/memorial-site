@@ -76,7 +76,7 @@ document.querySelector("#files").onchange = function() {
     const label = document.querySelector("label[for=files]");
     label.innerText = fileName ?? "Record or Select Video or Photo";
     // Enable submit button
-    document.querySelector("input[type=submit]").disabled = !value;
+    document.querySelector("input[type=submit]").disabled = false;
 };
 
 

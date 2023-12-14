@@ -133,7 +133,7 @@ footer {
 
 /* Custom Browse Files button */
 
-label.browse-files {
+/* label.browse-files {
     border: 1px solid #e5e5e5;
     border-radius: 10px;
     padding: 5px 10px;
@@ -143,7 +143,33 @@ label.browse-files {
 
 label.browse-files:hover {
     background-color: #eee;
+} */
+
+.button3 {
+    display:inline-block;
+    padding: 1rem;
+    margin:0 0.3em 0.3em 0;
+    border-radius:2em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight:300;
+    color:#FFFFFF;
+    background-color:rgb(41, 45, 52);
+    text-align:center;
+    transition: all 0.2s;
 }
+
+.button3:hover{
+   background-color:rgb(18, 19, 22);
+}
+
+@media all and (max-width:30em){
+.button3{
+    display:block;
+    margin:0.2em auto;
+    }
+} 
 
   /* Drop Zone */
 
