@@ -67,15 +67,6 @@ function handleFileUploadSubmit(e) {
     });
 }
 
-// Handle enabling Submit button
-document.querySelector("input[type=file]").onchange = ({
-    target: {
-        value
-    },
-}) => {
-    document.querySelector("input[type=submit]").disabled = !value;
-};
-
 document.querySelector('.file-select').addEventListener('change', handleFileUploadChange);
 document.querySelector('.file-submit').addEventListener('click', handleFileUploadSubmit);
 
@@ -84,6 +75,8 @@ document.querySelector("#files").onchange = function() {
     const fileName = this.files[0]?.name;
     const label = document.querySelector("label[for=files]");
     label.innerText = fileName ?? "Record or Select Video or Photo";
+    // Enable submit button
+    document.querySelector("input[type=submit]").disabled = !value;
 };
 
 
