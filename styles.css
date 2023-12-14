@@ -133,7 +133,7 @@ footer {
 
 /* Custom Browse Files button */
 
-label {
+label.browse-files {
     border: 1px solid #e5e5e5;
     border-radius: 10px;
     padding: 5px 10px;
@@ -141,7 +141,7 @@ label {
     transition: .5s;
 }
 
-label:hover {
+label.browse-files:hover {
     background-color: #eee;
 }
 
