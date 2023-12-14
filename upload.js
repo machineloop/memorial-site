@@ -64,6 +64,8 @@ function handleFileUploadSubmit(e) {
         alert('Upload finished, thank you for uploading a tribute video or image for Earl! Feel free to upload more.');
         document.querySelector("input[type=file]").value = null;
         document.querySelector("input[type=submit]").setAttribute('disabled', true);
+        const label = document.querySelector("label[for=files]");
+        label.innerText = "Record or Select Video or Photo";
     });
 }
 
