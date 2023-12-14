@@ -40,7 +40,11 @@
             <label for="name_submitter">Your Name:</label></br>
             <input type="text" id="name_submitter" name="name_submitter"></br>
             <progress id="file_progress" max="100" value="0" style="display: none;"></progress></br>
-            <input type="file" class="file-select" accept="video/mp4,video/x-m4v,video/quicktime,video/*,audio/x-m4a,audio/*,image/*,.heic,.heif"/>
+            <div class="input_container">
+                <label for="files" class="btn">Record or Select Video or Photo</label>
+                <input id="files" style="display:none;" type="file" class="file-select" accept="video/mp4,video/x-m4v,video/quicktime,video/*,audio/x-m4a,audio/*,image/*,.heic,.heif">
+            </div>
+            <!-- <input type="file" class="file-select" accept="video/mp4,video/x-m4v,video/quicktime,video/*,audio/x-m4a,audio/*,image/*,.heic,.heif"/> -->
             </br></br>
             <!-- <div class="drop-zone">
                 <span class="drop-zone__prompt">Drop photo or video here or click to record and</span>

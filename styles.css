@@ -131,6 +131,20 @@ footer {
     padding: 150px;
 }
 
+/* Custom Browse Files button */
+
+label {
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-family: 'Josefin Sans', sans-serif;
+    transition: .5s;
+}
+
+label:hover {
+    background-color: #eee;
+}
+
   /* Drop Zone */
 
   .drop-zone {

@@ -79,6 +79,13 @@ document.querySelector("input[type=file]").onchange = ({
 document.querySelector('.file-select').addEventListener('change', handleFileUploadChange);
 document.querySelector('.file-submit').addEventListener('click', handleFileUploadSubmit);
 
+// Handle Customizing Browse for Files Button
+document.querySelector("#files").onchange = function() {
+    const fileName = this.files[0]?.name;
+    const label = document.querySelector("label[for=files]");
+    label.innerText = fileName ?? "Record or Select Video or Photo";
+};
+
 
 document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
     const dropZoneElement = inputElement.closest(".drop-zone");
