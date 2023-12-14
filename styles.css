@@ -147,22 +147,27 @@ label.browse-files:hover {
 
 .button3 {
     display:inline-block;
-    padding: 1rem;
-    margin:0 0.3em 0.3em 0;
+    padding: 0.3em 1.2em;
+    margin: 0 0.3em 0.3em 0;
     border-radius:2em;
     box-sizing: border-box;
     text-decoration:none;
     font-family: 'Josefin Sans', sans-serif;
     font-weight:300;
     color:#FFFFFF;
-    background-color:rgb(41, 45, 52);
+    background-color:rgb(86, 94, 77);
     text-align:center;
     transition: all 0.2s;
 }
 
 .button3:hover{
-   background-color:rgb(18, 19, 22);
+   background-color: rgb(57, 63, 51);
 }
+
+.button3:disabled,
+.button3[disabled]{
+    opacity: 0.4;
+ }
 
 @media all and (max-width:30em){
 .button3{
