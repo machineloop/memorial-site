@@ -91,6 +91,7 @@ h2 {
     font-weight: 300;
     line-height: 25px;
     padding: 0.1rem;
+    max-width: 35vw;
 }
 
 #dash {
@@ -251,6 +252,10 @@ label.browse-files:hover {
     .column {
       width: 100%;
       flex: auto;
+      padding: 0.1rem;
+    }
+    #bulletin {
+      max-width: 100%;
     }
   }
 
