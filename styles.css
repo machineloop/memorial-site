@@ -227,6 +227,24 @@ label.browse-files:hover {
     text-align: center;
   }
 
+  /* Livestream and program side by side styles */
+  .memorial-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .column {
+    padding: 1rem;
+    flex: 1;
+  }
+  
+  @media (max-width: 1024px) {
+    .column {
+      width: 100%;
+      flex: auto;
+    }
+  }
 
 /* SLIDESHOW STYLING */
 
