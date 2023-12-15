@@ -265,7 +265,7 @@ label.browse-files:hover {
     .bulletin-embed {
         height: min(90vh, 631px);
     }
-    .mobile-bulletin-download {
+    .mobile-bulletin-download:after {
         content:'Click here to download bulletin and open on your device'
     }
   }
