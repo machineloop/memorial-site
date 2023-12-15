@@ -261,7 +261,8 @@ label.browse-files:hover {
       }
   }
 
-  @supports (-webkit-touch-callout: none) {
+  /* @supports (-webkit-touch-callout: none) { */
+  @media (hover: none) {
     .bulletin-embed {
         height: min(90vh, 631px);
     }
