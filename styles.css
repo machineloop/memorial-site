@@ -247,6 +247,19 @@ label.browse-files:hover {
     padding: 1rem;
     flex: 1;
   }
+
+  .bulletin-embed {
+    width: 100%;
+    height: min(90vh, 600px);
+    border: none;
+  }
+
+  @supports (-moz-appearance:none) {
+    .bulletin-embed {
+        margin-top: -31px;
+        height: min(90vh, 631px);
+      }
+  }
   
   @media (max-width: 1024px) {
     .column {
