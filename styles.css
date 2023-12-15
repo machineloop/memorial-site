@@ -260,6 +260,13 @@ label.browse-files:hover {
         height: min(90vh, 631px);
       }
   }
+
+  @supports (-webkit-touch-callout: none) {
+    .bulletin-embed {
+        margin-top: -31px;
+        height: min(360vh, 2525px);
+      }
+  }
   
   @media (max-width: 1024px) {
     .column {
