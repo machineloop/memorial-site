@@ -263,9 +263,11 @@ label.browse-files:hover {
 
   @supports (-webkit-touch-callout: none) {
     .bulletin-embed {
-        margin-top: -31px;
-        height: min(360vh, 2525px);
-      }
+        height: min(90vh, 631px);
+    }
+    .mobile-bulletin-download {
+        content:'Click here to download bulletin and open on your device'
+    }
   }
   
   @media (max-width: 1024px) {
