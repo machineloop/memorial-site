@@ -266,7 +266,7 @@ label.browse-files:hover {
         height: min(90vh, 631px);
     }
     .mobile-bulletin-download:after {
-        content:'Click here to download bulletin and open on your device'
+        content:'Open PDF on your phone'
     }
   }
   
