@@ -325,6 +325,7 @@ function setTimer() {
   }
   return false;
 }
+setTimer();
 
 function previousImage() {
   if (timer) {

@@ -60,6 +60,14 @@ h2 {
     display: none;
 }
 
+#eulogy {
+    display: none;
+}
+
+body.after-memorial #eulogy {
+    display: block;
+}
+
 #text {
     text-align: center;
     padding-left: 30px;
@@ -104,6 +112,28 @@ h2 {
     line-height: 25px;
     padding: 0.1rem;
     max-width: 35vw;
+}
+
+#text-box {
+    margin: 0 auto;
+    width: min(80vw, 900px);
+}
+
+#eulogy-box {
+    font-size: 1.25em;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+#eulogy-box > p {
+    padding: .3em;
+    font-style: italic;
+}
+
+#quote-box {
+    width: 67%;
+    margin: 0 auto;
+    padding-bottom: 1em;
 }
 
 #dash {
@@ -167,39 +197,39 @@ label.browse-files:hover {
 } */
 
 .button3 {
-    display:inline-block;
+    display: inline-block;
     padding: 0.3em 1.2em;
     margin: 0 0.3em 0.3em 0;
-    border-radius:2em;
+    border-radius: 2em;
     box-sizing: border-box;
-    text-decoration:none;
+    text-decoration: none;
     font-family: 'Josefin Sans', sans-serif;
-    font-weight:300;
-    color:#FFFFFF;
-    background-color:rgb(86, 94, 77);
-    text-align:center;
+    font-weight: 300;
+    color: #FFFFFF;
+    background-color: rgb(86, 94, 77);
+    text-align: center;
     transition: all 0.2s;
 }
 
-.button3:hover{
-   background-color: rgb(57, 63, 51);
+.button3:hover {
+    background-color: rgb(57, 63, 51);
 }
 
 .button3:disabled,
-.button3[disabled]{
+.button3[disabled] {
     opacity: 0.4;
- }
+}
 
-@media all and (max-width:30em){
-.button3{
-    display:block;
-    margin:0.2em auto;
+@media all and (max-width:30em) {
+    .button3 {
+        display: block;
+        margin: 0.2em auto;
     }
-} 
+}
 
-  /* Drop Zone */
+/* Drop Zone */
 
-  .drop-zone {
+.drop-zone {
     max-width: 400px;
     height: 300px;
     padding: 25px;
@@ -215,17 +245,17 @@ label.browse-files:hover {
     border: 4px dashed #009578;
     border-radius: 10px;
     min-width: 400px;
-  }
-  
-  .drop-zone--over {
+}
+
+.drop-zone--over {
     border-style: solid;
-  }
-  
-  .drop-zone__input {
+}
+
+.drop-zone__input {
     display: none;
-  }
-  
-  .drop-zone__thumb {
+}
+
+.drop-zone__thumb {
     width: 100%;
     height: 100%;
     border-radius: 10px;
@@ -233,9 +263,9 @@ label.browse-files:hover {
     background-color: #cccccc;
     background-size: cover;
     position: relative;
-  }
-  
-  .drop-zone__thumb::after {
+}
+
+.drop-zone__thumb::after {
     content: attr(data-label);
     position: absolute;
     bottom: 0;
@@ -246,53 +276,55 @@ label.browse-files:hover {
     background: rgba(0, 0, 0, 0.75);
     font-size: 14px;
     text-align: center;
-  }
+}
 
-  /* Livestream and program side by side styles */
-  .memorial-wrapper {
+/* Livestream and program side by side styles */
+.memorial-wrapper {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-  }
-  
-  .column {
+}
+
+.column {
     padding: 1rem;
     flex: 1;
-  }
+}
 
-  .bulletin-embed {
+.bulletin-embed {
     width: 100%;
     height: min(90vh, 600px);
     border: none;
-  }
+}
 
-  @supports (-moz-appearance:none) {
+@supports (-moz-appearance:none) {
     .bulletin-embed {
         margin-top: -31px;
         height: min(90vh, 631px);
-      }
-  }
+    }
+}
 
-  /* @supports (-webkit-touch-callout: none) { */
-  @media (hover: none) {
+/* @supports (-webkit-touch-callout: none) { */
+@media (hover: none) {
     .bulletin-embed {
         height: min(90vh, 631px);
     }
+
     .mobile-bulletin-download:after {
-        content:'Open PDF on your phone'
+        content: 'Open PDF on your phone'
     }
-  }
-  
-  @media (max-width: 1024px) {
+}
+
+@media (max-width: 1024px) {
     .column {
-      width: 100%;
-      flex: auto;
-      padding: 0.1rem;
+        width: 100%;
+        flex: auto;
+        padding: 0.1rem;
     }
+
     #bulletin {
-      max-width: 90%;
+        max-width: 90%;
     }
-  }
+}
 
 /* SLIDESHOW STYLING */
 
@@ -308,6 +340,7 @@ color: white;
 
 #slideshow {
     margin: 0 auto;
+    margin-top: 1rem;
     position: relative;
     width: 100%;
     height: 600px;
