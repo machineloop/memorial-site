@@ -1,3 +1,8 @@
+var utcSeconds = 1702840200;
+var d = new Date(0); // The 0 there is the key, which sets the date to the epoch
+d.setUTCSeconds(utcSeconds);
+if (new Date() > d ) document.body.classList.add('after-memorial'); 
+
 var imgNumber = 0;
 var path = ["002.jpeg",
   "image2.jpeg",
